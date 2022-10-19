@@ -9,7 +9,7 @@ export default function LoginForm({ stateChange, ...rest }) {
 
   const login = (e) => {
     e.preventDefault();
-    fetch("http://localhost:8080/api/login", {
+    fetch("https://ha-blog02.herokuapp.com/api/login", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

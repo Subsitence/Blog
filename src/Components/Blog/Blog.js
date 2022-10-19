@@ -15,7 +15,7 @@ const Blog = ({ blog }) => {
   const handleDelete = () => {
     const token = JSON.parse(localStorage.getItem("user")).accessToken;
 
-    fetch(`http://localhost:8080/api/post/${blog.id}`, {
+    fetch(`https://ha-blog02.herokuapp.com/api/post/${blog.id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

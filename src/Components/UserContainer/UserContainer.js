@@ -7,12 +7,15 @@ const UserContainer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/user", {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${user && user.accessToken}`,
-          },
-        });
+        const response = await fetch(
+          "https://ha-blog02.herokuapp.com/api/user",
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${user && user.accessToken}`,
+            },
+          }
+        );
         const data = await response.json();
         setUserInfos(data);
       } catch (err) {

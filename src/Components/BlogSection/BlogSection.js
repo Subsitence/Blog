@@ -21,12 +21,15 @@ export default function BlogSection() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/post", {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${user && user.accessToken}`,
-          },
-        });
+        const response = await fetch(
+          "https://ha-blog02.herokuapp.com/api/post",
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${user && user.accessToken}`,
+            },
+          }
+        );
         const data = await response.json();
         setBlogs(data);
       } catch (err) {

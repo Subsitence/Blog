@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 const ModalForm = ({ onClose, header, action, id }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [update, setUpdate] = useState(true);
   const navigate = useNavigate();
 
   const savePost = () => {
@@ -15,14 +14,17 @@ const ModalForm = ({ onClose, header, action, id }) => {
       imgUrl: "",
     };
 
-    fetch(`http://localhost:8080/api/post/${action === "PUT" ? id : ""}`, {
-      method: `${action}`,
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(post),
-    })
+    fetch(
+      `https://ha-blog02.herokuapp.com/api/post/${action === "PUT" ? id : ""}`,
+      {
+        method: `${action}`,
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(post),
+      }
+    )
       .then((response) => {
         return response.json();
       })

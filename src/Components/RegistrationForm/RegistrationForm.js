@@ -14,7 +14,7 @@ export default function RegistrationForm({ stateChange, ...rest }) {
       name,
     };
 
-    fetch("http://localhost:8080/api/registration", {
+    fetch("https://ha-blog02.herokuapp.com/api/registration", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
