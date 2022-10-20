@@ -29,7 +29,8 @@ const ModalForm = ({ onClose, header, action, id }) => {
         return response.json();
       })
       .then((data) => {
-        alert(data.message);
+        action === "PUT" && alert(data.message);
+        action === "POST" && window.location.reload(false);
       })
       .catch((error) => {
         console.error("Error:", error);
