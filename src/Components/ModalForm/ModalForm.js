@@ -47,10 +47,7 @@ const ModalForm = ({ onClose, header, action, id }) => {
       <div className="sm:max-w-[600px] p-6 px-6 py-8 w-[90%] bg-white p-2 rounded flex flex-col justify-center items-center">
         <p className="text-cyan-800">{header}</p>
 
-        <form
-          onSubmit={title.trim() !== "" && body.trim() !== "" ? savePost : null}
-          className="flex flex-col w-full"
-        >
+        <form className="flex flex-col w-full">
           {/* title */}
           <p className="my-2 text-xl">Title</p>
           <textarea
@@ -70,6 +67,9 @@ const ModalForm = ({ onClose, header, action, id }) => {
             type="submit"
             value="Save"
             className="bg-cyan-600 rounded text-white p-2 my-2"
+            onClick={
+              title.trim() !== "" && body.trim() !== "" ? savePost : null
+            }
           />
         </form>
       </div>
