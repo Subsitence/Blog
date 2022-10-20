@@ -8,7 +8,7 @@ import AdminPage from "../Components/AdminPage/AdminPage.js";
 
 export default function AppRouter() {
   return (
-    <Router basename="/blog">
+    <Router basename="/Blog">
       <Routes>
         <Route path="/" element={<BlogContainer />} />
         <Route path="/login" element={<Login />} />
