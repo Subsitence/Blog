@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Login from "../Components/Login/Login.js";
 import BlogContainer from "../Components/BlogContainer/BlogContainer.js";
