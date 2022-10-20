@@ -23,7 +23,7 @@ export default function Header() {
   };
 
   return (
-    <div className="shadow-md w-full fixed top-0 left-0 z-10">
+    <div className="shadow-md w-full fixed top-0 left-0 z-20">
       <div className="flex items-center justify-between bg-white py-4 md:px-10 px-7">
         <div
           onClick={homePage}
