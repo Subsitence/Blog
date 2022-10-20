@@ -45,7 +45,7 @@ export default function Header() {
             openModal ? "top-full opacity-100" : "top-0 opacity-0"
           }`}
         >
-          {user.role === "ADMIN" && (
+          {user && user.role === "ADMIN" && (
             <p
               onClick={toAdminPage}
               className="w-full cursor-pointer hover:bg-gray-100 font-semibold text-lg p-2 border-b-2 border-gray-300"
